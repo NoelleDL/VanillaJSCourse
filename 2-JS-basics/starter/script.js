@@ -25,6 +25,7 @@ console.log(firstName + ' ' + lastName);
 Basic Operators
 */
 // Math Operators
+/*
 var now, ageJohn, ageMark, yearJohn, yearMark, x;
 
 now = 2018;
@@ -48,4 +49,27 @@ console.log(typeof johnOlder);
 console.log(typeof now);
 console.log(typeof 'Mark is older than John');
 console.log(typeof x);
+*/
+// Operator precedence
 
+var now, yearJohn, fullAge, isFullAge, ageJohn, ageMark, x, y;
+
+now = 2018;
+yearJohn = 1989;
+fullAge = 18;
+
+isFullAge = now - yearJohn >= fullAge;
+
+console.log(isFullAge);
+
+ageJohn = now - yearJohn;
+ageMark = 35;
+average = (ageJohn + ageMark ) / 2;
+console.log(average);
+
+y = x = (3 + 5) * 4 - 6;
+console.log(x, y);
+
+x *= 2;
+x++;
+console.log(x);
