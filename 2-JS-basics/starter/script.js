@@ -52,6 +52,7 @@ console.log(typeof x);
 */
 // Operator precedence
 
+/*
 var now, yearJohn, fullAge, isFullAge, ageJohn, ageMark, x, y;
 
 now = 2018;
@@ -73,3 +74,24 @@ console.log(x, y);
 x *= 2;
 x++;
 console.log(x);
+*/
+
+// Coding Challenge
+
+var markHeight, markMass, johnHeight, johnMass, markBMI, johnBMI;
+
+// bmi = mass / (height * height);
+
+markHeight = 1.60;
+markMass = 70;
+johnHeight = 1.62;
+johnMass = 75;
+
+markBMI = markMass / (markHeight * markHeight);
+console.log(markBMI);
+
+johnBMI = johnMass / (johnHeight * johnHeight);
+console.log(johnBMI);
+
+markHigherBMI = markBMI > johnBMI;
+console.log("Is Mark's BMI higher than John's BMI? " + markHigherBMI);
