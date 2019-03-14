@@ -145,5 +145,10 @@ MGame3 = 123;
 JGameAverage = (JGame3 + JGame2 + JGame1) / 3
 MGameAverage = (MGame3 + MGame2 + MGame1) / 3
 
-winner = JGameAverage > MGameAverage ? 'John\'s team wins with an average score of ' + JGameAverage : 'Mike\'s team wins with an average score of ' + MGameAverage;
-console.log(winner);
+switch (true) {
+    case JGameAverage > MGameAverage:
+        console.log('John\'s team wins with an average score of ' + JGameAverage );
+        break;
+    default:
+        console.log( 'Mike\'s team wins with an average score of ' + MGameAverage);
+}
