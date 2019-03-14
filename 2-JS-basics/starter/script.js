@@ -274,7 +274,7 @@ highestBMI(personMark, personJohn);
 */
 
 // Loops and iteration
-
+/*
 for (var i = 0; i < 10; i+=2) {
     console.log(i);
 }
@@ -286,15 +286,34 @@ for (var i = john.length - 1; i >= 0; i--) {
     console.log(john[i]);
 }
 
-
-/*var i = 0;
+var i = 0;
 while(i < john.length) {
     console.log(john[i]);
     i++;
 }*/
 
+// Coding challenge 5
 
+bills = [124, 48, 268, 180, 42];
+tips = [];
+billTotals = []
+function calculateTip(bill) {
+    for (var i = 0; i < bill.length; i++) {
+        if (bill[i] < 50) {
+            tips.push(bill[i] * .2)
+        }
+        else if (bill[i] > 50 && bill[i] < 200) {
+            tips.push(bill[i] * .15)
+        }
+        else {
+            tips.push(bill[i] * .1)
+        }
 
+        billTotals[i] = bills[i] + tips[i];
+    }
+
+    return billTotals;
+}
 
 
 
