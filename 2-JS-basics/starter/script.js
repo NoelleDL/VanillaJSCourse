@@ -230,6 +230,7 @@ console.log(john);
 */
 
 // Coding challenge 4
+/*
 markHeight = 1.60;
 markMass = 70;
 johnHeight = 1.62;
@@ -270,9 +271,27 @@ function highestBMI(personA, personB) {
 }
 
 highestBMI(personMark, personJohn);
+*/
+
+// Loops and iteration
+
+for (var i = 0; i < 10; i+=2) {
+    console.log(i);
+}
+
+var john = ['john', 'smith', 1990, 'designer', 'purple'];
+
+for (var i = john.length - 1; i >= 0; i--) {
+    if (typeof john[i] !== 'string') continue;
+    console.log(john[i]);
+}
 
 
-
+/*var i = 0;
+while(i < john.length) {
+    console.log(john[i]);
+    i++;
+}*/
 
 
 
