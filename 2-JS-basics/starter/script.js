@@ -156,7 +156,7 @@ switch (true) {
 */
 
 // Coding Challenge 3
-
+/*
 var billTotal, tip;
 var tips = [];
 var billTotals = [];
@@ -181,3 +181,30 @@ function tipCalclulator (bill) {
     return tips, billTotals;
 
 }
+*/
+
+// Objects and properties
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john.firstName);
+console.log(john['firstName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+var jane = {};
+jane.name = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
