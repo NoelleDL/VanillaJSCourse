@@ -98,6 +98,7 @@ console.log("Is Mark's BMI higher than John's BMI? " + markHigherBMI);
 */
 
 // Switch statement
+/*
 
 var job = 'driver';
 switch (job) {
@@ -126,3 +127,26 @@ age >= 18 ? console.log('can drink') : console.log('can\'t drink');
 
 var drink = age >= 18 ? 'beer' : 'juice';
 console.log(drink);
+
+*/
+
+// Coding Challenge 2
+
+var JGame1, JGame2, JGame3, MGame1, MGame2, MGame3, JGameAverage, MGameAverage;
+
+JGame1 = 89;
+JGame2 = 120;
+JGame3 = 103;
+
+MGame1 = 116;
+MGame2 = 94;
+MGame3 = 123;
+
+JGameAverage = (JGame3 + JGame2 + JGame1) / 3
+MGameAverage = (MGame3 + MGame2 + MGame1) / 3
+
+if (JGameAverage > MGameAverage) {
+    console.log('John\'s team wins with an average score of ' + JGameAverage)
+} else {
+    console.log('Mike\'s team wins with an average score of ' + MGameAverage)
+};
