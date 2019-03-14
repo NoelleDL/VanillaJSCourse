@@ -132,7 +132,7 @@ console.log(drink);
 
 // Coding Challenge 2
 
-var JGame1, JGame2, JGame3, MGame1, MGame2, MGame3, JGameAverage, MGameAverage;
+var JGame1, JGame2, JGame3, MGame1, MGame2, MGame3, JGameAverage, MGameAverage, winner;
 
 JGame1 = 89;
 JGame2 = 120;
@@ -145,8 +145,5 @@ MGame3 = 123;
 JGameAverage = (JGame3 + JGame2 + JGame1) / 3
 MGameAverage = (MGame3 + MGame2 + MGame1) / 3
 
-if (JGameAverage > MGameAverage) {
-    console.log('John\'s team wins with an average score of ' + JGameAverage)
-} else {
-    console.log('Mike\'s team wins with an average score of ' + MGameAverage)
-};
+winner = JGameAverage > MGameAverage ? 'John\'s team wins with an average score of ' + JGameAverage : 'Mike\'s team wins with an average score of ' + MGameAverage;
+console.log(winner);
