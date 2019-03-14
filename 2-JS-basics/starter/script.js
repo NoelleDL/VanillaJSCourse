@@ -131,6 +131,7 @@ console.log(drink);
 */
 
 // Coding Challenge 2
+/*
 
 var JGame1, JGame2, JGame3, MGame1, MGame2, MGame3, JGameAverage, MGameAverage, winner;
 
@@ -151,4 +152,32 @@ switch (true) {
         break;
     default:
         console.log( 'Mike\'s team wins with an average score of ' + MGameAverage);
+}
+*/
+
+// Coding Challenge 3
+
+var billTotal, tip;
+var tips = [];
+var billTotals = [];
+
+function tipCalclulator (bill) {
+    switch (true) {
+        case bill < 50:
+            tip = bill * .2;
+            billTotal = bill * 1.2;
+            break;
+        case bill >= 50 && bill < 200:
+            tip = bill * .15;
+            billTotal = bill * 1.15;
+            break;
+        default:
+             tip = bill * .1;
+             billTotal = bill * 1.1;
+
+    }
+    tips.push(tip);
+    billTotals.push(billTotal);
+    return tips, billTotals;
+
 }
