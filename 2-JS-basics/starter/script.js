@@ -78,7 +78,7 @@ console.log(x);
 
 // Coding Challenge
 
-var markHeight, markMass, johnHeight, johnMass, markBMI, johnBMI;
+/*var markHeight, markMass, johnHeight, johnMass, markBMI, johnBMI;
 
 // bmi = mass / (height * height);
 
@@ -95,3 +95,34 @@ console.log(johnBMI);
 
 markHigherBMI = markBMI > johnBMI;
 console.log("Is Mark's BMI higher than John's BMI? " + markHigherBMI);
+*/
+
+// Switch statement
+
+var job = 'driver';
+switch (job) {
+    case 'teacher':
+        console.log('Teaches kids how to code.');
+        break;
+    case 'driver':
+        console.log('Drives an uber');
+        break;
+    default:
+        console.log('Doesn\'t do a thing.');
+
+}
+var age = 20;
+switch (true) {
+    case age < 13:
+        console.log('not a teenager');
+    case age >= 13 && age < 20:
+        console.log('is a teenager');
+        break;
+    default:
+        console.log('must be an adult');
+}
+
+age >= 18 ? console.log('can drink') : console.log('can\'t drink');
+
+var drink = age >= 18 ? 'beer' : 'juice';
+console.log(drink);
