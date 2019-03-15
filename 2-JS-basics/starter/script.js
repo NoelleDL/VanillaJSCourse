@@ -293,7 +293,7 @@ while(i < john.length) {
 }*/
 
 // Coding challenge 5
-/*
+
 bills = [124, 48, 268, 180, 42];
 tips = [];
 billTotals = []
@@ -309,12 +309,12 @@ function calculateTip(bill) {
             tips.push(bill[i] * .1)
         }
 
-        billTotals[i] = bills[i] + tips[i];
+        billTotals[i] = bill[i] + tips[i];
     }
 
     return billTotals;
 }
-*/
+
 
 
 var restaurants = {
