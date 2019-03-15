@@ -293,7 +293,7 @@ while(i < john.length) {
 }*/
 
 // Coding challenge 5
-
+/*
 bills = [124, 48, 268, 180, 42];
 tips = [];
 billTotals = []
@@ -314,7 +314,31 @@ function calculateTip(bill) {
 
     return billTotals;
 }
+*/
 
+
+var restaurants = {
+    bill: [124, 48, 268, 180, 42],
+    tips: [],
+    billTotals: [],
+    calcTip: function() {
+        for (var i = 0; i < this.bill.length; i++) {
+            if (this.bill[i] < 50) {
+                this.tips.push(this.bill[i] * .2)
+            }
+            else if (this.bill[i] > 50 && this.bill[i] < 200) {
+                this.tips.push(this.bill[i] * .15)
+             }
+            else {
+                this.tips.push(this.bill[i] * .1)
+            }
+
+        this.billTotals[i] = this.bill[i] + this.tips[i];
+        }
+
+        return this.billTotals;
+       }
+    }
 
 
 
