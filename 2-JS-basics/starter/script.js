@@ -313,12 +313,22 @@ function calculateTip(bill) {
     }
 
     return billTotals;
-}
+};
 
 
 
-var restaurants = {
+var johnRestaurants = {
+    name: "Mark",
     bills: [124, 48, 268, 180, 42],
+    calcAverageTip: function() {
+        this.averageTip = 0;
+        var count = 0;
+        for (var i = 0; i < this.tips.length; i++) {
+            this.averageTip += this.tips[i];
+            count += 1;
+        }
+        this.averageTip = this.averageTip/count;
+    },
     calcTip: function() {
         this.tips = [];
         this.billTotals = [];
@@ -340,10 +350,56 @@ var restaurants = {
 
         return this.billTotals;
        }
+    };
+
+ var markRestaurants = {
+    name: "Mark",
+    bills: [77, 375, 110, 45],
+    calcAverageTip: function() {
+        this.averageTip = 0;
+        var count = 0;
+        for (var i = 0; i < this.tips.length; i++) {
+            this.averageTip += this.tips[i];
+            count += 1;
+        }
+        this.averageTip = this.averageTip/count;
+    },
+    calcTip: function() {
+        this.tips = [];
+        this.billTotals = [];
+        for (var i = 0; i < this.bills.length; i++) {
+            var percentage;
+            var bill = this.bills[i];
+            if (bill < 100) {
+                percentage = .2
+            }
+            else if (bill > 100 && bill < 300) {
+                percentage = .1;
+             }
+            else {
+                percentage = .25;
+            }
+        this.tips.push(bill * percentage);
+        this.billTotals[i] = bill + this.tips[i];
+        }
+
+        return this.billTotals;
+       }
+    };
+
+function highestAverageTip(billObject1, billObject2) {
+    billObject1.calcTip();
+    billObject1.calcAverageTip();
+    billObject2.calcTip();
+    billObject2.calcAverageTip();
+
+    if (billObject1.averageTip > billObject2.averageTip) {
+        console.log(billObject1.name + ' tips more with a tip average of ' + billObject1.averageTip + ' .');
     }
+    else {
+        console.log(billObject2.name + ' tips more with a tip average of ' + billObject2.averageTip + ' .');
+    }
+}
 
-
-
-
-
+highestAverageTip(markRestaurants, johnRestaurants);
 
