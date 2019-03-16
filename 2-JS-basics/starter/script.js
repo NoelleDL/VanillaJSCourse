@@ -318,22 +318,24 @@ function calculateTip(bill) {
 
 
 var restaurants = {
-    bill: [124, 48, 268, 180, 42],
-    tips: [],
-    billTotals: [],
+    bills: [124, 48, 268, 180, 42],
     calcTip: function() {
-        for (var i = 0; i < this.bill.length; i++) {
-            if (this.bill[i] < 50) {
-                this.tips.push(this.bill[i] * .2)
+        this.tips = [];
+        this.billTotals = [];
+        for (var i = 0; i < this.bills.length; i++) {
+            var percentage;
+            var bill = this.bills[i];
+            if (bill < 50) {
+                percentage = .2
             }
-            else if (this.bill[i] > 50 && this.bill[i] < 200) {
-                this.tips.push(this.bill[i] * .15)
+            else if (bill > 50 && bill < 200) {
+                percentage = .15;
              }
             else {
-                this.tips.push(this.bill[i] * .1)
+                percentage = .1;
             }
-
-        this.billTotals[i] = this.bill[i] + this.tips[i];
+        this.tips.push(bill * percentage);
+        this.billTotals[i] = bill + this.tips[i];
         }
 
         return this.billTotals;
