@@ -42,7 +42,7 @@ console.log(age);
 
 // First scoping example
 
-/*
+
 var a = 'Hello!';
 first();
 
@@ -55,7 +55,7 @@ function first() {
         console.log(a + b + c);
     }
 }
-*/
+
 
 
 
