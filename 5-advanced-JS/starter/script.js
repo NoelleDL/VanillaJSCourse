@@ -78,7 +78,7 @@ retirementUS(1980);
 
 retirement(66)(1980);
 console.log(a);
-*/
+
 
 function interviewQuestions(job) {
   return function(name) {
@@ -93,3 +93,32 @@ function interviewQuestions(job) {
 }
 
 interviewQuestions('teacher')('John');
+*/
+
+// Bind, call and apply
+
+var john = {
+  name: 'John',
+  age: 26,
+  job: 'teacher',
+  presentation: function(style, timeOfDay) {
+    if (style === 'formal') {
+      console.log('Good ' + timeOfDay + ', ladies and gentleman! I am ' + this.name);
+    } else if (style === 'friendly') {
+      console.log('Hey ' + this.name);
+    }
+  }
+}
+
+var emily = {
+  name: "Emily",
+  age: 35,
+  job: 'designer'
+};
+
+john.presentation('formal', 'morning');
+john.presentation.call(emily, 'friendly', 'afternoon');
+john.presentation.apply(emily, ['friendly', 'afternoon']);
+
+var johnFriendly = john.presentation.bind(john,'formal');
+johnFriendly('morning');
