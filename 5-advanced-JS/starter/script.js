@@ -26,7 +26,7 @@ function maxHeartRate(age) {
 var ages = arrayCalculate(years, calculateAge);
 var adultAges = arrayCalculate(years, isAdult);
 var heartRates = arrayCalculate(ages, maxHeartRate);
-*/
+
 
 function interviewQuestions(job) {
   if (job === 'designer') {
@@ -48,3 +48,16 @@ var teacherQuestion = interviewQuestions('teacher');
 teacherQuestion('John');
 
 interviewQuestions('teacher')('Mark');
+*/
+
+// Lecture IIFE
+
+(function () {
+  var score = Math.random() * 18;
+  console.log(score >= 5);
+})();
+
+(function (goodluck) {
+  var score = Math.random() * 18;
+  console.log(score >= 5 - goodluck);
+})(5);
