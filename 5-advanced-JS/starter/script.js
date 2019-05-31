@@ -1,6 +1,6 @@
 //Section 5
 
-var years = [1990, 1980, 1970, 1998, 2000];
+/*var years = [1990, 1980, 1970, 1998, 2000];
 
 function arrayCalculate(array, fn) {
   var result = [];
@@ -26,3 +26,25 @@ function maxHeartRate(age) {
 var ages = arrayCalculate(years, calculateAge);
 var adultAges = arrayCalculate(years, isAdult);
 var heartRates = arrayCalculate(ages, maxHeartRate);
+*/
+
+function interviewQuestions(job) {
+  if (job === 'designer') {
+    return function(name) {
+      console.log(name + ' , can you please explainwhat UX design is?');
+    }
+  } else if (job === 'teacher') {
+    return function(name) {
+      console.log('What subject do you teach, ' + name +'?');
+    }
+  } else {
+    return function(name) {
+      console.log('Hello ' + name + ', what do you do?');
+    }
+  }
+}
+
+var teacherQuestion = interviewQuestions('teacher');
+teacherQuestion('John');
+
+interviewQuestions('teacher')('Mark');
