@@ -97,7 +97,11 @@ interviewQuestions('teacher')('John');
 
 // Bind, call and apply
 
+<<<<<<< HEAD
 /*var john = {
+=======
+var john = {
+>>>>>>> 9ef12ebbfaaa0ae5a2adabd6fd9d6318e8155daf
   name: 'John',
   age: 26,
   job: 'teacher',
@@ -122,6 +126,7 @@ john.presentation.apply(emily, ['friendly', 'afternoon']);
 
 var johnFriendly = john.presentation.bind(john,'formal');
 johnFriendly('morning');
+<<<<<<< HEAD
 *\
 /////////////////////////////
 // CODING CHALLENGE
@@ -167,3 +172,5 @@ console.log(randomQuestion.question);
 
 
 })();
+=======
+>>>>>>> 9ef12ebbfaaa0ae5a2adabd6fd9d6318e8155daf
