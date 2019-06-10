@@ -97,11 +97,7 @@ interviewQuestions('teacher')('John');
 
 // Bind, call and apply
 
-<<<<<<< HEAD
 /*var john = {
-=======
-var john = {
->>>>>>> 9ef12ebbfaaa0ae5a2adabd6fd9d6318e8155daf
   name: 'John',
   age: 26,
   job: 'teacher',
@@ -126,7 +122,7 @@ john.presentation.apply(emily, ['friendly', 'afternoon']);
 
 var johnFriendly = john.presentation.bind(john,'formal');
 johnFriendly('morning');
-<<<<<<< HEAD
+
 *\
 /////////////////////////////
 // CODING CHALLENGE
@@ -160,17 +156,25 @@ c) correct answer (I would use a number for this)
     this.bestAnswer = bestAnswer;
   }
 
+  Question.prototype.showQuestion = function {
+    console.log(this.question);
+
+    for (var i = 0; i < this.answers.length; i++) {
+      console.log(i + ':' + this.answers[i])
+    }
+  }
+}
+
 
 var question1 = new Question('Favorite animal?', ['cat', 'dog', 'moose'], 'MOOSE!');
 var question2 = new Question('Favorite food?', ['Mexican', 'Thai', 'British'], "MEXICAN!");
 var question3 = new Question('Favorite time of day?', ['Morning', 'Afternoon', 'Evening'], "MORNING!");
 var questions = [question1, question2, question3];
 var index = Math.floor(Math.random() * questions.length);
+
 console.log(index);
 var randomQuestion = questions[index];
 console.log(randomQuestion.question);
 
 
 })();
-=======
->>>>>>> 9ef12ebbfaaa0ae5a2adabd6fd9d6318e8155daf
