@@ -166,7 +166,6 @@ c) correct answer (I would use a number for this)
 
 
 
-
 var question1 = new Question('Favorite animal?', ['cat', 'dog', 'moose'], 'MOOSE!');
 var question2 = new Question('Favorite food?', ['Mexican', 'Thai', 'British'], "MEXICAN!");
 var question3 = new Question('Favorite time of day?', ['Morning', 'Afternoon', 'Evening'], "MORNING!");
@@ -175,6 +174,7 @@ var index = Math.floor(Math.random() * questions.length);
 var randomQuestion = questions[index];
 
 questions[index].showQuestion();
+var answer = parseInt(prompt("Please enter your answer:"));
 
 
 })();
