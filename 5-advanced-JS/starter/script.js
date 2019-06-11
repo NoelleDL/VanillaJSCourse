@@ -160,27 +160,21 @@ c) correct answer (I would use a number for this)
     console.log(this.question);
 
     for (var i = 0; i < this.answers.length; i++) {
-      console.log(this.answers[i])
+      console.log((i + 1) + ': ' + this.answers[i]);
     }
   }
 
   Question.prototype.correctAnswer = function(answer) {
-    console.log(answer);
-      for (var i = 0; i < this.answers.length; i++) {
-        if (answer== this.bestAnswer) {
+        if (answer == this.bestAnswer) {
           console.log("Well done");
         } else {
-          console.log("Not correct");
+          console.log("Try again");
         }
       }
-  }
 
-
-
-
-var question1 = new Question('Favorite animal?', ['cat', 'dog', 'moose'], 'moose');
-var question2 = new Question('Favorite food?', ['Mexican', 'Thai', 'British'], "Mexican");
-var question3 = new Question('Favorite time of day?', ['Morning', 'Afternoon', 'Evening'], "Morning");
+var question1 = new Question('Favorite animal?', ['cat', 'dog', 'moose'], '3');
+var question2 = new Question('Favorite food?', ['Mexican', 'Thai', 'British'], '1');
+var question3 = new Question('Favorite time of day?', ['Morning', 'Afternoon', 'Evening'], '1');
 var questions = [question1, question2, question3];
 var index = Math.floor(Math.random() * questions.length);
 var randomQuestion = questions[index];
