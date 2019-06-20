@@ -23,8 +23,29 @@ var budgetController = (function() {
       income: 0
     }
 
-  }
-  
+  };
+
+  return {
+    addItem: function(type, description, value) {
+      var newItem;
+      //create new id
+
+      if (ID.length > 0) {
+        ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
+      } else {
+        ID.length = 0;
+      }
+      if (type === 'expenses') {
+        newItem = new Expense(id, des, val);
+
+      } else {
+        newItem = new Income(id, des, val);
+      }
+        data.allItems[type].push(newItem)
+        return newItem;
+    }
+  };
+
 
 })();
 
@@ -69,8 +90,9 @@ var controller = (function(budgetCtrl, UIContrl) {
   };
 
   var ctrlAddItem = function() {
-    var input = UIContrl.getInput();
-    console.log(input);
+    var input, newItem;
+    input = UIContrl.getInput();
+    newItem = budgetCtrl.addItem(inupt.type, input.description, input.value);
   }
     //get input data
     //add item to budget budget budgetController
@@ -82,6 +104,10 @@ var controller = (function(budgetCtrl, UIContrl) {
       init: function() {
         console.log('Application has started.');
         setupEventListeners();
+      },
+
+      testings: function() {
+        console.log(data);
       }
     };
 
